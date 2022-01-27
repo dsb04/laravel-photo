@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PhotoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::post('/photo', [ExercController::class, 'photo']);
-Route::post('/images', [ExercController::class, 'images']);
-Route::post('/document', [ExercController::class, 'document']);
+Route::post('/photo', [PhotoController::class, 'photo']);
+Route::post('/images', [PhotoController::class, 'images']);
+Route::post('/document', [PhotoController::class, 'document']);
